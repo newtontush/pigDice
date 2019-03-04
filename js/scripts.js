@@ -46,4 +46,14 @@ $(document).ready(function(){
       player1.playerName = player1Name;
       player2.playerName = player2Name
     });
-
+    $("button#new-game").click(function(event){
+        clearValues();
+        player1.newGame();
+        player2.newGame();
+        $("#round-score-1").empty();
+        $("#total-score-1").empty();
+        $("#die-roll-1").empty();
+        $("#round-score-2").empty();
+        $("#total-score-2").empty();
+        $("#die-roll-2").empty();
+      });
