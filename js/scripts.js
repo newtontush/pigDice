@@ -57,3 +57,9 @@ $(document).ready(function(){
         $("#total-score-2").empty();
         $("#die-roll-2").empty();
       });
+      $("button#roll-die-button-1").click(function(event){
+        player1.roll = throwdice();
+        $("#die-roll-1").text(player1.roll);
+        player1.rollone();
+        $("#round-score-1").text(player1.tempscore);
+      });
