@@ -18,7 +18,7 @@ function Player(turn){
 }
 
 
-Player.prototype.rollone = function(){
+Player.prototype.roll = function(){
   if(this.roll === 1){
     this.timescore = 0;
     alert("Your Turn is Over " + this.playerName + ", you rolled a 1!!" );
@@ -34,7 +34,7 @@ Player.prototype.hold = function(){
   alert(this.playerName + ", Your Turn is Over, Pass the Mouse");
 }
 
-Player.prototype.winnerCheck = function(){
+Player.prototype.winner = function(){
   if(this.totalscore >= 100){
     alert(this.playerName + " Won this Round!");
   }
@@ -72,17 +72,17 @@ $(document).ready(function(){
     $("#die-roll-2").empty();
   });
 
-  $("button#roll-die-button-1").click(function(event){
+  $("button#button-1").click(function(event){
     player1.roll = throwdice();
     $("#die-roll-1").text(player1.roll);
-    player1.rollone();
+    player1.roll();
     $("#round-score-1").text(player1.tempscore);
   });
 
-   $("button#roll-die-button-2").click(function(event){
+   $("button#button-2").click(function(event){
     player2.roll = throwdice();
     $("#die-roll-2").text(player2.roll);
-    player2.rollone();
+    player2.roll();
     $("#round-score-2").text(player2.tempscore);
   });
 
@@ -91,7 +91,7 @@ $(document).ready(function(){
     $("#total-score-1").text(player1.totalscore);
     $("#round-total-1").empty();
     $("#die-roll-1").empty();
-    player1.winnerCheck();
+    player1.winner();
   });
 
   $("button#hold-button-2").click(function(event){
@@ -99,7 +99,7 @@ $(document).ready(function(){
     $("#total-score-2").text(player2.totalscore);
     $("#round-score-2").empty();
     $("#die-roll-2").empty();
-    player2.winnerCheck();
+    player2.winner();
   });
 
 })
