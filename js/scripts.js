@@ -76,3 +76,11 @@ $(document).ready(function(){
         $("#die-roll-1").empty();
         player1.winnerCheck();
       });
+      $("button#hold-button-2").click(function(event){
+        player2.hold();
+        $("#total-score-2").text(player2.totalscore);
+        $("#round-score-2").empty();
+        $("#die-roll-2").empty();
+        player2.winnerCheck();
+      });
+    
