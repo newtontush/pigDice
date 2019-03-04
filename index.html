@@ -20,37 +20,38 @@
             <p><strong>The first player to reach 100 points wins.</strong></p>
             <h2>Enter player details down below.</h2>
             <form id="player-1">
-                <div class="form-group">
-                    <label for="player1name">Player 1 Name:</label>
-                    <input required class="player1Name form control" type="text">
-                </div>
+                    <div class="form-group">
+                      <label for="player1Name">Player 1 Name:</label>
+                      <input required class="player1Name form-control" type="text">
+                    </div>
+                  </form>
             </form>
             <form id="player-2">
-                <div class="form-group">
-                    <label for="player2name">Player 2 Name:</label>
-                    <input required class="player2name form control" type="text">
-                </div>
-            </form>
+                    <div class="form-group">
+                      <label for="player2Name">Player 2 Name:</label>
+                      <input required class="player2Name form-control" type="text">
+                    </div>
+                  </form>
             <button id="start" class="btn-info btn">Start</button>
             <div class="row">
                 <div class="col-md-6">
                     <p><strong>LET'S PLAY!</strong></p>
                     <h2>Player 1: <span id="player1Name"></span></h2>
                     <div id="the button">
-                        <button  id="roll-the-die" class="btn-info btn">Roll</button>
-                        <button id="hold-the-die" class="btn-info btn">Hold</button>
-                        <h3>Round score:<span id="roll-1"></span></h3>
-                        <p>Round Total:<span id="round-score-1"></span></p>
+                        <button  id="roll-die-button-1" class="btn-info btn">Roll</button>
+                        <button id="hold-button-1" class="btn-info btn">Hold</button>
+                        <h3>Dice Roll: <span id="die-roll-1"></span></h3>
+                        <p>Round Total: <span id="round-score-1"></span></p>
                         <h2>Total Score: <span id="total-score-1"></span></h2>
                     </div>
                     <div class="col-md-6">
                             <h2>Player 2: <span id="player2Name"></span></h2>
                             <div id="the button">
-                                <button  id="roll-the-die" class="btn-info btn">Roll</button>
-                                <button id="hold-the-die" class="btn-info btn">Hold</button>
-                                <h3>Round score:<span id="roll-2"></span></h3>
-                                <p>Round Total:<span id="round-score-2"></span></p>
-                                <h2>Total Score: <span id="total-score-2"></span></h2>
+                                <button  id="roll-die-button-2" class="btn-info btn">Roll</button>
+                                <button id="hold-button-2" class="btn-info btn">Hold</button>
+                                <h3>Dice Roll: <span id="die-roll-2"></span></h3>
+                                <p>Round Total: <span id="round-score-2"></span></p>
+                                 <h2>Total Score: <span id="total-score-2"></span></h2>
                             </div>
                 </div>
             </div>
