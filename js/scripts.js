@@ -63,3 +63,9 @@ $(document).ready(function(){
         player1.rollone();
         $("#round-score-1").text(player1.tempscore);
       });
+      $("button#roll-die-button-2").click(function(event){
+        player2.roll = throwdice();
+        $("#die-roll-2").text(player2.roll);
+        player2.rollone();
+        $("#round-score-2").text(player2.tempscore);
+      });
